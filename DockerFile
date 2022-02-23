@@ -1,0 +1,9 @@
+FROM microsoft/aspnetcore-build:6.0
+
+WORKDIR C:/Users/alext/source/RazorPagesPizza
+
+COPY . . 
+
+RUN dotnet build -c RazorPagesPizza
+
+ENTRYPOINT ["dotnet", "run", "--no-launch-profile"]
